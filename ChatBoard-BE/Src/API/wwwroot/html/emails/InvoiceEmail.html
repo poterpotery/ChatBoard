@@ -1,0 +1,149 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Invoice Details</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        .email-container {
+            width: 600px;
+            margin: auto;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background-color: #6a1b9a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+            .header img {
+                height: 50px;
+            }
+
+            .header h1 {
+                margin: 0;
+                font-size: 24px;
+            }
+
+        .content {
+            padding: 20px;
+        }
+
+            .content h2 {
+                color: #6a1b9a;
+                font-size: 20px;
+            }
+
+            .content p {
+                font-size: 14px;
+                color: #333;
+                line-height: 1.6;
+            }
+
+        .invoice-details {
+            margin: 20px 0;
+            font-size: 16px;
+            color: #333;
+            font-weight: bold;
+            border: 1px solid #6a1b9a;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+            .invoice-details table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            .invoice-details th,
+            .invoice-details td {
+                border: 1px solid #6a1b9a;
+                padding: 8px;
+                text-align: left;
+            }
+
+            .invoice-details th {
+                background-color: #6a1b9a;
+                color: white;
+            }
+
+        .footer {
+            background-color: #6a1b9a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h1>Vertex Digital</h1>
+        </div>
+        <div class="content">
+            <h2>Hello, [Recipient Name]</h2>
+            <p>We have generated a new invoice for your account. Please find the details below:</p>
+            <div class="invoice-details">
+                <h3>Invoice Details</h3>
+                <table>
+                    <tr>
+                        <th>Invoice Number</th>
+                        <td>{invoice_number}</td>
+                    </tr>
+                    <tr>
+                        <th>Invoice Date</th>
+                        <td>{invoice_date}</td>
+                    </tr>
+                    <tr>
+                        <th>Due Date</th>
+                        <td>{due_date}</td>
+                    </tr>
+                </table>
+                <h3>Property and Meter Details</h3>
+                <table>
+                    <tr>
+                        <th>Property</th>
+                        <td>{property_details}</td>
+                    </tr>
+                    <tr>
+                        <th>Meter</th>
+                        <td>{meter_details}</td>
+                    </tr>
+                </table>
+                <h3>Charges Breakdown</h3>
+                <table>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                    <tr>
+                        <th>Total</th>
+                        <th>{total_amount}</th>
+                    </tr>
+                </table>
+            </div>
+            <p>Please ensure to make the payment by the due date to avoid any late fees.</p>
+            <p>If you have any questions or need further assistance, please feel free to contact our support team.</p>
+            <p>Best Regards,<br />Vertex Digital Team</p>
+        </div>
+        <div class="footer">
+            <p>COPYRIGHT &copy; 2024 ALL RIGHTS RESERVED BY Vertex Digital</p>
+        </div>
+    </div>
+</body>
+
+</html>

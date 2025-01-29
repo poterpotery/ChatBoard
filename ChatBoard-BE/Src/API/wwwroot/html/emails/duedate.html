@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Due Date Notification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            padding: 10px 0;
+        }
+
+            .header img {
+                max-width: 150px;
+            }
+
+        .content {
+            margin: 20px 0;
+        }
+
+            .content h1 {
+                font-size: 24px;
+                color: #333333;
+            }
+
+            .content p {
+                font-size: 16px;
+                color: #666666;
+            }
+
+            .content .due-soon {
+                color: #ff9800;
+            }
+
+            .content .overdue {
+                color: #f44336;
+            }
+
+        .invoice-details {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+
+            .invoice-details h2 {
+                font-size: 20px;
+                margin: 0;
+                color: #6a1b9a;
+            }
+
+            .invoice-details p {
+                font-size: 16px;
+                margin: 5px 0;
+            }
+
+        .footer {
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+            color: #999999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- <img src="https://your-logo-url.com/logo.png" alt="Vertex Digital Logo"> -->
+            <h1>Vertex Digital</h1>
+        </div>
+        <div class="content">
+            <h1>Invoice Due Date Notification</h1>
+            <p class="{due_status_class}">
+                {due_message}
+            </p>
+            <div class="invoice-details">
+                <h2>Invoice Details</h2>
+                <p><strong>Invoice Number:</strong> {invoice_number}</p>
+                <p><strong>Invoice Date:</strong> {invoice_date}</p>
+                <p><strong>Due Date:</strong> {due_date}</p>
+                <p><strong>Total Amount:</strong> {total_amount}</p>
+            </div>
+            <p>If you have any questions, please contact our support team.</p>
+        </div>
+        <div class="footer">
+            <p>COPYRIGHT &copy; 2024 ALL RIGHTS RESERVED BY Vertex Digital</p>
+        </div>
+    </div>
+</body>
+
+</html>

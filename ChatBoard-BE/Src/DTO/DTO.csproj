@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.10" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.ML" Version="3.0.0" />
+    <PackageReference Include="Microsoft.ML.ImageAnalytics" Version="3.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ViewModel\Token\" />
+    <None Remove="ViewModel\Posts\" />
+    <None Remove="ViewModel\Account\KYC\" />
+    <None Remove="ViewModel\Notifications\" />
+    <None Remove="ViewModel\Chat\" />
+    <None Remove="ViewModel\Messages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModel\Token\" />
+    <Folder Include="ViewModel\Messages\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overdue Invoice Reminder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            padding: 10px 0;
+        }
+
+            .header img {
+                max-width: 150px;
+            }
+
+        .content {
+            margin: 20px 0;
+        }
+
+            .content h1 {
+                font-size: 24px;
+                color: #ff0000;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            .content p {
+                font-size: 16px;
+                color: #333333;
+                line-height: 1.6;
+            }
+
+        .cta-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+            .cta-button a {
+                display: inline-block;
+                background-color: #ff0000;
+                color: #ffffff;
+                text-decoration: none;
+                padding: 10px 20px;
+                border-radius: 4px;
+                transition: background-color 0.3s ease;
+            }
+
+                .cta-button a:hover {
+                    background-color: #cc0000;
+                }
+
+        .footer {
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+            color: #999999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <!--<img src="https://your-logo-url.com/logo.png" alt="Vertex Digital Logo">-->
+            <h1>Vertex Digital</h1>
+        </div>
+        <div class="content">
+            <h1>Overdue Invoice Reminder</h1>
+            <p>
+                Dear {Recipient Name},<br><br>
+                This is an urgent reminder that your invoice <strong>{invoice_number}</strong> is now
+                <strong>overdue</strong>. Please settle the payment as soon as possible to avoid any further
+                action.<br><br>
+                Invoice Date: {invoice_date}<br>
+                Due Date: {due_date}<br>
+                Total Amount: {total_amount}<br><br>
+                <!--To make the payment now, please click the button below:<br><br>-->
+            </p>
+            <<!--div class="cta-button">
+                <a href="{payment_link}">Pay Now</a>
+            </div>-->
+            <p>If you have already made the payment, please disregard this notice.</p>
+            <p>If you have any questions or need assistance, please contact our support team immediately.</p>
+        </div>
+        <div class="footer">
+            &copy; 2024 Vertex Digital. All rights reserved.
+        </div>
+    </div>
+</body>
+
+</html>
